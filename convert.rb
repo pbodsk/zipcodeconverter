@@ -12,7 +12,7 @@ else
   zip_code_results = zip_codes_json["results"]
   zip_code_results.each do | zip_code |
     address = zip_code["address"].split(',').first
-    converted_element = { :zip => zip_code["zipcode"], :address => address}
+    converted_element = { :zip => zip_code["zipcode"], :name => address}
     converted_array << converted_element
   end
   output_file = File.open("seZipCodes.json", "w")
